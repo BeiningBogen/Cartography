@@ -1,16 +1,21 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.1
 import PackageDescription
+
 
 let package = Package(
     name: "Cartography",
-     platforms: [.iOS("8.0")],
+    platforms: [.iOS(SupportedPlatform.IOSVersion.v10)],
     products: [
-        .library(name: "Cartography", targets: ["Cartography"])
+        .library(
+            name: "Cartography",
+            targets: ["Cartography"])
+    ],
+    dependencies: [
     ],
     targets: [
-        .target(
-            name: "Cartography",
-            path: "Cartography"
-        )
+         .target(
+                   name: "Cartography",
+                   path: "Cartography"
+               )
     ]
 )
